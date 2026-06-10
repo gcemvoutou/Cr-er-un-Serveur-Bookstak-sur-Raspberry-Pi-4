@@ -95,8 +95,9 @@ On utilise l'outil officiel **Raspberry Pi Imager** (téléchargeable sur [raspb
 
 <img src="images/1.png" alt="Raspberry Pi Imager" width="65%">
 
-**Image choisie :** `Raspberry Pi OS Lite (64-bit)` — sans interface graphique, pour dédier toutes les ressources du Pi au serveur.
-<img src="images/2.png" alt="Raspberry Pi Imager" width="40%">
+**Image choisie :** `Raspberry Pi OS Lite (64-bit)` **chemin : others -> PiOS Lite** — sans interface graphique, pour dédier toutes les ressources du Pi au serveur.
+<break>
+<img src="images/2.png" alt="Raspberry Pi Imager" width="300">
 
 Avant de lancer l'écriture, on configure les paramètres avancés directement dans Raspberry Pi Imager :
 
