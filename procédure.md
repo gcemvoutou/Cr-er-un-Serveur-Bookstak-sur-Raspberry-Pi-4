@@ -128,11 +128,12 @@ On attend **3 minutes complètes** sans rien toucher : le Pi génère ses clés 
 
 ### Étape 3.5 — Fixer l'adresse IP du Pi (bail DHCP statique)
 
-<img src="images/3.png" alt=" bail DHCP statique " width="450">
 
 Par défaut, la box attribue les adresses IP dynamiquement (DHCP). Si l'adresse du Pi change après une coupure, deux problèmes apparaissent : la connexion SSH devient invalide, et les redirections de ports configurées à l'étape 7 pointent vers une adresse qui n'existe plus.
 
 **Solution :** on crée un **bail DHCP statique** dans l'interface de la box. On associe l'adresse MAC du Pi à une IP fixe choisie (ex : `192.168.1.130`). La box reconnaît le Pi à son adresse MAC et lui attribue toujours la même IP.
+
+<img src="images/3.png" alt=" bail DHCP statique " width="450">
 
 | Opérateur | Où trouver la réservation d'IP |
 |---|---|
