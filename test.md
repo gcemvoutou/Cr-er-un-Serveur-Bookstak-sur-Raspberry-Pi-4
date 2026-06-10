@@ -78,12 +78,10 @@ Raspberry Pi 4 (IP locale fixe réservée par bail DHCP)
 
 ### Étape 1 — Déballage et inspection du matériel
 
-<!-- 📸 Photo du matériel posé sur une table (Pi, carte SD, câbles) -->
-
 On identifie et vérifie chaque composant avant de commencer :
 
 - **Le Raspberry Pi 4** : carte verte rectangulaire avec ports USB, Ethernet, micro-HDMI et USB-C (alimentation).
-- **La carte microSD** : support de stockage du système. On ne touche pas les contacts dorés.
+- **La carte microSD** : support de stockage du système.
 - **Le câble USB-C** : il doit obligatoirement délivrer **5V / 3A** minimum — une alimentation insuffisante provoque des instabilités.
 - **Le câble Ethernet** : connexion filaire à la box, plus stable que le Wi-Fi pour un serveur.
 
@@ -93,7 +91,7 @@ On identifie et vérifie chaque composant avant de commencer :
 
 ### Étape 2 — Préparation de la carte microSD
 
-<!-- 📸 Capture de Raspberry Pi Imager avec les options sélectionnées -->
+![Raspberry Pi Imager](images/1.png)
 
 On utilise l'outil officiel **Raspberry Pi Imager** (téléchargeable sur [raspberrypi.com/software](https://www.raspberrypi.com/software)) pour flasher l'OS sur la carte.
 
