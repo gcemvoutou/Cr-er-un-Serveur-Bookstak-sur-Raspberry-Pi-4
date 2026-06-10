@@ -91,11 +91,12 @@ On identifie et vérifie chaque composant avant de commencer :
 
 ### Étape 2 — Préparation de la carte microSD
 
-<img src="images/1.png" alt="Raspberry Pi Imager" width="65%">
-
 On utilise l'outil officiel **Raspberry Pi Imager** (téléchargeable sur [raspberrypi.com/software](https://www.raspberrypi.com/software)) pour flasher l'OS sur la carte.
 
+<img src="images/1.png" alt="Raspberry Pi Imager" width="65%">
+
 **Image choisie :** `Raspberry Pi OS Lite (64-bit)` — sans interface graphique, pour dédier toutes les ressources du Pi au serveur.
+<img src="images/1.png" alt="Raspberry Pi Imager" width="40%">
 
 Avant de lancer l'écriture, on configure les paramètres avancés directement dans Raspberry Pi Imager :
 
