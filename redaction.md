@@ -76,9 +76,9 @@ Raspberry Pi 4 (IP locale fixe)
 
 ### Étape 1 — Installation de l'OS
 
-<!-- 📸 Insérer ici une capture de Raspberry Pi Imager -->
+![Raspberry Pi Imager](images/1.png)
 
-On utilise l'outil officiel **Raspberry Pi Imager** https://www.raspberrypi.com/software pour flasher la carte microSD depuis le PC. L'image choisie est **Raspberry Pi OS Lite (64-bit)** : sans interface graphique, pour dédier toutes les ressources du Pi au serveur.
+On utilise l'outil officiel **Raspberry Pi Imager** via ce lien : https://www.raspberrypi.com/software pour flasher la carte microSD depuis le PC. L'image choisie est **Raspberry Pi OS Lite (64-bit)** : sans interface graphique, pour dédier toutes les ressources du Pi au serveur.
 
 Lors de l'écriture, on configure directement dans Raspberry Pi Imager :
 - Le nom d'utilisateur et le mot de passe
