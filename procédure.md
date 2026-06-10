@@ -91,7 +91,7 @@ On identifie et vérifie chaque composant avant de commencer :
 
 ### Étape 2 — Préparation de la carte microSD
 
-![Raspberry Pi Imager](images/1.png)
+<img src="images/1.png" alt="Raspberry Pi Imager" width="65%">
 
 On utilise l'outil officiel **Raspberry Pi Imager** (téléchargeable sur [raspberrypi.com/software](https://www.raspberrypi.com/software)) pour flasher l'OS sur la carte.
 
