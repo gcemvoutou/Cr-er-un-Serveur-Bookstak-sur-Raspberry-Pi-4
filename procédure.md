@@ -97,7 +97,7 @@ On utilise l'outil officiel **Raspberry Pi Imager** (téléchargeable sur [raspb
 
 **Image choisie :** `Raspberry Pi OS Lite (64-bit)` **chemin : others -> PiOS Lite** — sans interface graphique, pour dédier toutes les ressources du Pi au serveur.
 
-<img src="images/2.png" alt="Raspberry Pi Imager" width="300">
+<img src="images/2.png" alt=" Config Pi Imager" width="300">
 
 Avant de lancer l'écriture, on configure les paramètres avancés directement dans Raspberry Pi Imager :
 
@@ -115,8 +115,6 @@ L'écriture prend entre 3 et 10 minutes. Une fois terminée, on éjecte propreme
 ---
 
 ### Étape 3 — Premier démarrage du Raspberry Pi
-
-<!-- 📸 Photo du Pi branché avec les DEL allumées -->
 
 On assemble et démarre le Pi dans l'ordre suivant :
 
