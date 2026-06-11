@@ -166,8 +166,6 @@ Si le prompt `pi@raspberrypi:~$` apparaît, la connexion est établie et on peut
 
 ### Étape 5 — Nom de domaine dynamique (DuckDNS)
 
-<img src="images/5.png" alt="interface DuckDNS avec le domaine créé" width="480">
-
 L'adresse IP publique fournie par l'opérateur change régulièrement. Pour accéder au serveur via une URL stable depuis n'importe où, on utilise **DuckDNS** — un service de DNS dynamique gratuit.
 
 DuckDNS crée un sous-domaine (ex : `bookstack-clara.duckdns.org`) et le fait pointer automatiquement vers l'IP publique actuelle de la connexion.
@@ -176,6 +174,8 @@ DuckDNS crée un sous-domaine (ex : `bookstack-clara.duckdns.org`) et le fait po
 1. Se connecter sur [duckdns.org](https://www.duckdns.org) (avec un compte Google ou GitHub)
 2. Saisir le nom souhaité dans le champ « sub domain »
 3. Cliquer sur **add domain**
+
+<img src="images/5.png" alt="interface DuckDNS avec le domaine créé" width="480">
 
 > ⚠️ Le nom de domaine est utilisé dans les fichiers de configuration des étapes suivantes. Il ne faut pas le changer ensuite.
 
