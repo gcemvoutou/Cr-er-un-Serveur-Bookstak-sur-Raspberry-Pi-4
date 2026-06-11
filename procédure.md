@@ -186,41 +186,73 @@ Voici l'IP publique actuelle (ex: 176.XX.XX.XX)
 
 ### Étape 6 — Déploiement des services avec Docker
 
-**Installation de Docker sur le Pi :**
+# SERVEUR BOOKSTACK sur Raspberry Pi 4 — Guide complet débutant
+
+## A. Mettre à jour le système
+
+Cette commande télécharge et installe toutes les dernières mises à jour de sécurité. Elle peut prendre 5 à 15 minutes selon votre connexion.
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+<img src="images/8.png" alt="Sudo apt" width="350">
+
+> 💡 **Que veut dire `sudo` ?**
+> `sudo` (Super User DO) signifie « exécuter cette commande en tant qu'administrateur ». C'est l'équivalent de « Clic droit → Exécuter en tant qu'administrateur » sous Windows.
+
+## B. Installer Docker
+
+Docker est le moteur qui va faire tourner vos applications (BookStack, la base de données, le système de sécurité) dans des « conteneurs » isolés et propres. Pensez-y comme à un gestionnaire de petites machines virtuelles.
 
 ```bash
 curl -sSL https://get.docker.com | sh
+```
+
+Cette commande télécharge et installe Docker automatiquement. Cela peut prendre 2 à 5 minutes.
+
+Ensuite, donnez les droits Docker à votre utilisateur (pour ne pas avoir à taper `sudo` à chaque commande Docker) :
+
+```bash
 sudo usermod -aG docker $USER
 ```
-<img src="images/7.png" alt="`docker ps` avec les 3 conteneurs actifs" width="550">
 
-On se déconnecte puis reconnecte en SSH pour appliquer les droits, puis on crée le dossier de travail :
+Appliquez les changements en vous déconnectant puis reconnectant au SSH :
+
+```bash
+exit
+ssh pi@VOTRE_IP_LOCALE
+```
+
+## C. Créer le dossier de configuration
+
+Créez un dossier dédié à BookStack et entrez dedans :
 
 ```bash
 mkdir bookstack && cd bookstack
+```
+
+Ouvrez l'éditeur de texte intégré (nano) pour créer le fichier de configuration principal :
+
+```bash
 nano docker-compose.yml
 ```
 
-Le fichier `docker-compose.yml` orchestre trois conteneurs :
-
-| Conteneur | Image | Rôle |
-|---|---|---|
-| `bookstack` | `linuxserver/bookstack` | Application wiki (interface web) |
-| `bookstack_db` | `linuxserver/mariadb` | Base de données relationnelle |
-| `nginx-proxy-manager` | `jc21/nginx-proxy-manager` | Reverse proxy + SSL |
-
-**Extrait du fichier de configuration :**
+Une page noire vide s'affiche. C'est normal. Faites un **clic droit** (Windows) ou **Cmd+V** (Mac) pour coller le bloc de configuration ci-dessous en entier :
 
 ```yaml
 services:
   bookstack:
     image: lscr.io/linuxserver/bookstack:latest
+    container_name: bookstack
     environment:
+      - PUID=1000
+      - PGID=1000
       - TZ=Europe/Paris
-      - APP_URL=https://bookstack-clara.duckdns.org
+      - APP_URL=https://VOTRE_NOM.duckdns.org  # <-- MODIFIEZ ICI
       - DB_HOST=bookstack_db
       - DB_USER=bookstack
-      - DB_PASS=mot_de_passe_db
+      - DB_PASS=un_mot_de_passe_db_secret
+      - DB_DATABASE=bookstackapp
     volumes:
       - ./config:/config
     restart: unless-stopped
@@ -229,16 +261,23 @@ services:
 
   bookstack_db:
     image: lscr.io/linuxserver/mariadb:latest
+    container_name: bookstack_db
     environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+      - MYSQL_ROOT_PASSWORD=un_root_passe_secret
       - MYSQL_DATABASE=bookstackapp
       - MYSQL_USER=bookstack
-      - MYSQL_PASS=mot_de_passe_db
+      - MYSQL_PASS=un_mot_de_passe_db_secret
     volumes:
       - ./db_config:/config
     restart: unless-stopped
 
   nginx-proxy-manager:
-    image: jc21/nginx-proxy-manager:latest
+    image: 'jc21/nginx-proxy-manager:latest'
+    container_name: nginx-proxy-manager
+    restart: unless-stopped
     ports:
       - '80:80'
       - '443:443'
@@ -246,7 +285,6 @@ services:
     volumes:
       - ./npm/data:/data
       - ./npm/letsencrypt:/etc/letsencrypt
-    restart: unless-stopped
 ```
 
 La directive `restart: unless-stopped` garantit le redémarrage automatique des services après une coupure de courant.
