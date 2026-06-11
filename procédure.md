@@ -195,10 +195,9 @@ Cette commande télécharge et installe toutes les dernières mises à jour de s
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
-<img src="images/8.png" alt="Sudo apt" width="350">
+<img src="images/8.png" alt="Sudo apt" width="500">
 
-> 💡 **Que veut dire `sudo` ?**
-> `sudo` (Super User DO) signifie « exécuter cette commande en tant qu'administrateur ». C'est l'équivalent de « Clic droit → Exécuter en tant qu'administrateur » sous Windows.
+> 💡 **`sudo` permet d'exécuter cette commande en tant qu'administrateur ?**
 
 ## B. Installer Docker
 
@@ -207,6 +206,7 @@ Docker est le moteur qui va faire tourner vos applications (BookStack, la base d
 ```bash
 curl -sSL https://get.docker.com | sh
 ```
+<img src="images/7.png" alt="curl -sSL" width="700">
 
 Cette commande télécharge et installe Docker automatiquement. Cela peut prendre 2 à 5 minutes.
 
