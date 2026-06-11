@@ -301,6 +301,7 @@ docker compose up -d
 ```bash
 docker ps
 ```
+<img src="images/10.png" alt="docker ps" width="450">
 
 On doit voir 3 lignes avec le statut `Up` : `bookstack`, `bookstack_db` et `nginx-proxy-manager`.
 
