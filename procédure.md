@@ -175,10 +175,10 @@ DuckDNS crée un sous-domaine (ex : `bookstack-clara.duckdns.org`) et le fait po
 2. Saisir le nom souhaité dans le champ « sub domain »
 3. Cliquer sur **add domain**
 
-<img src="images/5.png" alt="interface DuckDNS avec le domaine créé" width="300">
+<img src="images/5.png" alt="interface DuckDNS avec le domaine créé" width="350">
 Voici l'IP publique actuelle (ex: 176.XX.XX.XX)
 
-<img src="images/6.png" alt="Ip Publique" width="300">
+<img src="images/6.png" alt="Ip Publique" width="350">
 
 > ⚠️ Le nom de domaine est utilisé dans les fichiers de configuration des étapes suivantes. Il ne faut pas le changer ensuite.
 
@@ -186,14 +186,13 @@ Voici l'IP publique actuelle (ex: 176.XX.XX.XX)
 
 ### Étape 6 — Déploiement des services avec Docker
 
-<!-- 📸 Capture de la sortie de `docker ps` avec les 3 conteneurs actifs -->
-
 **Installation de Docker sur le Pi :**
 
 ```bash
 curl -sSL https://get.docker.com | sh
 sudo usermod -aG docker $USER
 ```
+<img src="images/7.png" alt="`docker ps` avec les 3 conteneurs actifs" width="550">
 
 On se déconnecte puis reconnecte en SSH pour appliquer les droits, puis on crée le dossier de travail :
 
