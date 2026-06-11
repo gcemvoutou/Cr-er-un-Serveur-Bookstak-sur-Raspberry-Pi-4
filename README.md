@@ -32,6 +32,3 @@ techniques, des notes et de la documentation de manière structurée.
 
 👉 [Procédure d'installation complète](./procédure.md)
 
-👉 [Notes de rédaction](./redaction.md)
-
-## 🗂️ Structure du dépôt
