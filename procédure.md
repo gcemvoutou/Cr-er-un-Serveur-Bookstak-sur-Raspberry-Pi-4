@@ -150,13 +150,13 @@ Par défaut, la box attribue les adresses IP dynamiquement (DHCP). Si l'adresse 
 
 ### Étape 4 — Connexion SSH et prise en main à distance
 
-<!-- 📸 Capture du terminal avec le prompt pi@raspberrypi affiché -->
 
 On récupère l'IP locale du Pi depuis l'interface de la box (section « Appareils connectés », appareil nommé `raspberrypi`), puis on se connecte depuis le terminal Windows :
 
 ```bash
-ssh pi@192.168.1.130
+ssh pi@192.168.1.130  pi = nom que vous avez donné a votre serveur Raspberry à l'étape 2
 ```
+<img src="images/4.png" alt="terminal avec le prompt pi@raspberrypi" width="480">
 
 À la première connexion, on accepte l'empreinte de clé (`yes`), puis on saisit le mot de passe configuré à l'étape 2. Le mot de passe ne s'affiche pas à l'écran pendant la saisie — c'est normal.
 
@@ -166,7 +166,7 @@ Si le prompt `pi@raspberrypi:~$` apparaît, la connexion est établie et on peut
 
 ### Étape 5 — Nom de domaine dynamique (DuckDNS)
 
-<!-- 📸 Capture de l'interface DuckDNS avec le domaine créé -->
+<img src="images/5.png" alt="interface DuckDNS avec le domaine créé" width="480">
 
 L'adresse IP publique fournie par l'opérateur change régulièrement. Pour accéder au serveur via une URL stable depuis n'importe où, on utilise **DuckDNS** — un service de DNS dynamique gratuit.
 
