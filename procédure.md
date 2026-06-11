@@ -175,10 +175,10 @@ DuckDNS crée un sous-domaine (ex : `bookstack-clara.duckdns.org`) et le fait po
 2. Saisir le nom souhaité dans le champ « sub domain »
 3. Cliquer sur **add domain**
 
-<img src="images/5.png" alt="interface DuckDNS avec le domaine créé" width="480">
+<img src="images/5.png" alt="interface DuckDNS avec le domaine créé" width="300">
 Voici l'IP publique actuelle (ex: 176.XX.XX.XX)
 
-<img src="images/6.png" alt="Ip Publique" width="480">
+<img src="images/6.png" alt="Ip Publique" width="300">
 
 > ⚠️ Le nom de domaine est utilisé dans les fichiers de configuration des étapes suivantes. Il ne faut pas le changer ensuite.
 
