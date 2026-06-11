@@ -361,8 +361,10 @@ On se connecte (identifiants par défaut : `admin@example.com` / `changeme`) et 
 - SSL Certificate : `Request a new SSL Certificate`
 - Force SSL : ✅ (redirige automatiquement HTTP → HTTPS)
 - Acceptation des CGU Let's Encrypt : ✅
+  
+<img src="images/14.png" alt="Onglet" width="430">
 
-Le certificat est généré en 30 à 60 secondes et se renouvelle automatiquement tous les 90 jours.
+> 💡 Le certificat est généré en 30 à 60 secondes et se renouvelle automatiquement tous les 90 jours.
 
 ---
 
