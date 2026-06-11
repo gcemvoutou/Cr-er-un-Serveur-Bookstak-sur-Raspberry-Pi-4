@@ -328,10 +328,11 @@ Le serveur tourne sur le réseau local mais reste invisible depuis Internet. On 
 > 💡 Le port 80 est nécessaire pour la validation des certificats Let's Encrypt. Le port 443 gère le trafic HTTPS chiffré.
 
 # HTTP :
-<img src="images/11.png" alt="redirection de ports 80 " width="700">
+<img src="images/11.png" alt="redirection de ports 80" width="700">
 
 # HTTPS :
-<img src="images/12.png" alt="redirection de ports 443 " width="700">
+<img src="images/12.png" alt="redirection de ports 443" width="700">
+
 ---
 
 ### Étape 8 — Sécurisation HTTPS avec Let's Encrypt
