@@ -337,8 +337,6 @@ Le serveur tourne sur le réseau local mais reste invisible depuis Internet. On 
 
 ### Étape 8 — Sécurisation HTTPS avec Let's Encrypt
 
-<!-- 📸 Capture de l'interface Nginx Proxy Manager avec le certificat SSL actif -->
-
 On accède à l'interface de Nginx Proxy Manager depuis le navigateur du PC :
 
 ```
@@ -356,6 +354,8 @@ On se connecte (identifiants par défaut : `admin@example.com` / `changeme`) et 
 | Forward Hostname / IP | `bookstack` (nom du conteneur Docker) |
 | Forward Port | `80` |
 | Block Common Exploits | ✅ Coché |
+
+<img src="images/13.png" alt="Config Proxy Host" width="430">
 
 **Onglet SSL :**
 - SSL Certificate : `Request a new SSL Certificate`
