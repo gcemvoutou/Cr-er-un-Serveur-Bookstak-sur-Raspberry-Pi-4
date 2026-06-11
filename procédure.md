@@ -294,6 +294,7 @@ La directive `restart: unless-stopped` garantit le redémarrage automatique des 
 ```bash
 docker compose up -d
 ```
+<img src="images/9.png" alt="docker compose up-d" width="700">
 
 **Vérification :**
 
