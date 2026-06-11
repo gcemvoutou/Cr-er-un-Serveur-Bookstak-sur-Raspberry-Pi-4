@@ -362,7 +362,7 @@ On se connecte (identifiants par défaut : `admin@example.com` / `changeme`) et 
 - Force SSL : ✅ (redirige automatiquement HTTP → HTTPS)
 - Acceptation des CGU Let's Encrypt : ✅
   
-<img src="images/14.png" alt="Onglet" width="430">
+<img src="images/14.png" alt="Onglet SSL" width="430">
 
 > 💡 Le certificat est généré en 30 à 60 secondes et se renouvelle automatiquement tous les 90 jours.
 
@@ -370,15 +370,14 @@ On se connecte (identifiants par défaut : `admin@example.com` / `changeme`) et 
 
 ### Étape 9 — Résultat final et tests
 
-<!-- 📸 Capture de BookStack affiché dans un navigateur mobile avec le cadenas HTTPS -->
-
 **Test depuis l'extérieur du réseau :** on désactive le Wi-Fi du smartphone pour passer en 4G, puis on accède à :
 
 ```
 https://bookstack-clara.duckdns.org
 ```
-
 La page BookStack s'affiche avec le cadenas HTTPS dans la barre d'adresse.
+
+<img src="images/15.png" alt="Page BookStack" width="430">
 
 **Première connexion :** identifiants par défaut `admin@admin.com` / `password` — à changer immédiatement dans le profil.
 
