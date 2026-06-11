@@ -377,7 +377,7 @@ https://bookstack-clara.duckdns.org
 ```
 La page BookStack s'affiche avec le cadenas HTTPS dans la barre d'adresse.
 
-<img src="images/15.png" alt="Page BookStack" width="430">
+<img src="images/15.png" alt="Page BookStack" width="1200">
 
 **Première connexion :** identifiants par défaut `admin@admin.com` / `password` — à changer immédiatement dans le profil.
 
