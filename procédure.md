@@ -54,24 +54,7 @@ Le Raspberry Pi 4 (faible consommation, format compact, architecture ARM) est pa
 
 ## Architecture technique
 
-```
-Internet
-    │
-    ▼
-Box (routeur) — Redirection ports 80 et 443
-    │
-    ▼
-Raspberry Pi 4 (IP locale fixe réservée par bail DHCP)
-    │
-    └── Docker Compose
-          ├── bookstack           (application wiki, port 80 interne)
-          ├── bookstack_db        (base de données MariaDB)
-          └── nginx-proxy-manager (reverse proxy, ports 80 / 443 / 81)
-                  │
-                  └── Certificat SSL Let's Encrypt
-                        → https://bookstack-clara.duckdns.org
-```
-
+<img src="images/architecture_technique.png" alt="Architecture technique" width="40%">
 ---
 
 ## Étapes de réalisation
