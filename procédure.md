@@ -54,8 +54,8 @@ Le Raspberry Pi 4 (faible consommation, format compact, architecture ARM) est pa
 
 ## Architecture technique
 
-<img src="images/architecture_technique.png" alt="Architecture technique" width="40%">
----
+<img src="images/architecture_technique.png" alt="Architecture technique" width="60%">
+
 
 ## Étapes de réalisation
 
